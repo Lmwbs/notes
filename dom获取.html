@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom获取</title>
+</head>
+<body>
+    <ul class="nav">
+        <li>我的首页</li>
+        <li>产品介绍</li>
+        <li>联系方式</li>
+    </ul>
+    <script>
+        let li=document.querySelectorAll('.nav li')
+        for(i=0;i<li.length;i++){
+            console.log(li[i]);
+        }
+    </script>
+</body>
+</html>

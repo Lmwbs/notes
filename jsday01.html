@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一天练习</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        div h1{
+            margin: 10px auto;
+            text-align: center;
+        }
+        table tr,td,th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        table{
+            border-spacing: 0;
+            border-collapse: collapse;
+            text-align: center;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let get=+prompt('请输入本月的收入：')
+        let water=+prompt('请输入本月的水费')
+        let electricity=+prompt('请输入本月的电费')
+        let net=+prompt('请输入本月的网费')
+        let surplus=get-water-electricity-net
+        document.write(`
+        <div>
+        <h1>本月生活收支表</h1>
+        <table>
+            <tr>
+                <th>本月收入总额</th>
+                <th>水费</th>
+                <th>电费</th>
+                <th>网费</th>
+                <th>本月余额</th>
+            </tr>
+            <tr>
+                <td>${get}</td>
+                <td>${water}</td>
+                <td>${electricity}</td>
+                <td>${net}</td>
+                <td>${surplus}</td>
+            </tr>
+        </table>
+        </div>
+        `)
+    </script>
+</body>
+</html>

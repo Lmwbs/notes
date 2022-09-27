@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>屏幕尺寸</title>
+</head>
+<body>
+    <script>
+        window.addEventListener('resize',function(){
+            let w=document.documentElement.clientWidth
+            if(w>1080){
+                document.body.style.backgroundColor='green'
+            }else if(w>540){
+                document.body.style.backgroundColor='yellow'
+            }else{
+                document.body.style.backgroundColor='pink'
+            }
+        })
+    </script>
+</body>
+</html>

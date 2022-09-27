@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器</title>
+    <style>
+        div{
+            width: 96px;
+            height: 80px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./img/image/tianshi.gif" alt="">
+        <button>解除3秒自动关闭</button>
+    </div>
+    <script>
+        let img=document.querySelector('div')
+        let btn=document.querySelector('button')
+        let time=setTimeout(function(){
+            img.style.display='none'
+        },3000)
+        btn.addEventListener('click',function(){
+            clearTimeout(time)
+        })
+    </script>
+</body>
+</html>

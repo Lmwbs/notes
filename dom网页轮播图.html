@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页轮播图</title>
+    <style>
+        .box{
+            width: 700px;
+            height: 320px;
+            margin: 100px auto 0;
+            background-color: #000;
+            position: relative;
+        }
+        .box .tip{
+            width: 700px;
+            height: 53px;
+            line-height: 53px;
+            position: absolute;
+            bottom: 0px;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 10;
+        }
+        .box .tip h3{
+            width: 82%;
+            margin: 0px;
+            padding-left:20px;
+            margin-right: 20px;
+            color: #98E404;
+            font-size: 28px;
+            float: left;
+            font-weight: 500;
+            font-family: "Microsoft Yahei", Tahoma, Geneva;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="img/image/b01.jpg" alt="">
+        <div class="tip">
+            <h3>挑战云歌单，欢迎你来</h3>
+        </div>
+    </div>
+    <script>
+        let data=[
+            {
+                imgSrc:'img/image/b01.jpg',
+                title:'挑战云歌单，欢迎你来'
+            },
+            {
+                imgSrc:'img/image/b02.jpg',
+                title:'田园日记，上演上京记'
+            },
+            {
+                imgSrc:'img/image/b03.jpg',
+                title:'甜蜜攻势再度回归'
+            },
+            {
+                imgSrc:'img/image/b04.jpg',
+                title:'我为歌狂，生为歌狂'
+            },
+            {
+                imgSrc:'img/image/b05.jpg',
+                title:'年度校园主题活动'
+            },
+            {
+                imgSrc:'img/image/b06.jpg',
+                title:''
+            },
+            {
+                imgSrc:'img/image/b07.jpg',
+                title:''
+            },
+            {
+                imgSrc:'img/image/b08.jpg',
+                title:''
+            },
+            {
+                imgSrc:'img/image/b09.jpg',
+                title:''
+            }]
+            let pic=document.querySelector('img')
+            let text=document.querySelector('h3')
+            let i=0
+            setInterval(function () {
+                i++
+                pic.src=data[i].imgSrc
+                text.innerHTML=data[i].title
+                i===8?i=-1:i
+            },1000)
+    </script>
+</body>
+</html>
